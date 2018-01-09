@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<title>Using Grid Layout</title>
+
+<style>
+
+  body {
+    background: teal;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 4em 1fr 1fr 1fr;
+
+    grid-template-areas: "head head head"
+                         "master master other"
+                         "another lowermaster lowermaster";
+
+    height: 100vh;
+    width: 100vw;
+  }
+
+  p {
+    list-style: none;
+    border: black thin dashed;
+    background: goldenrod;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  main>h1 {
+    grid-area: head;
+    background-color: #8ca0ff;
+  }
+
+  .lm {
+    grid-area: lowermaster;
+  }
+
+  .m {
+    grid-area: master;
+  }
+
+
+</style>
+
+<main>
+  <h1>Using Grid Layout</h1>
+  <p>Grids are nice.</p>
+  <p class=m>Grids are fun.</p>
+  <p>Grids are dynamic.</p>
+  <p>Grids are surprising.</p>
+  <p class=lm>Grids are ok.</p>
+  <p>Grids are etc.</p>
+</main>

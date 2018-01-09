@@ -1,0 +1,54 @@
+:root {
+  --layout: "header header" "nav article" "footer footer";
+  --columns: 15em 1fr;
+  --space-between-content: 2em;
+  --space-around-content: 0;
+  --bg: bisque;
+}
+
+@media (max-width: 60em) {
+  :root {
+    --columns: 1fr;
+    --layout: "header" "article" "nav" "footer";
+    --space-between-content: 0;
+    --space-around-content: 1em 5em ;
+    --bg: yellow;
+  }
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+header {
+  grid-area: header;
+}
+article {
+  grid-area: article;
+}
+nav {
+  grid-area: nav;
+}
+footer {
+  grid-area: footer;
+}
+
+main {
+  width: 100vw;
+  max-width: 60em;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: var(--columns);
+  grid-template-areas: var(--layout);
+  grid-gap: var(--space-between-content);
+}
+
+main>* {
+  margin: 0;
+  padding: var(--space-around-content);
+}
+
+body {
+  background: var(--bg);
+}

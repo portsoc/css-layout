@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<title>Custom Properties Example 1</title>
+
+<style>
+
+  :root {
+    --mycol: goldenrod;
+    --maincol: red;
+  }
+
+  body { background: var(--mycol); }
+  h1   { color: var(--maincol);    }
+
+</style>
+
+<h1>Custom Properties Example</h1>
+
+<ol>
+  <li>This document has a background colour that is set using a CSS3 custom property.</li>
+  <li>The heading is coloured using a different property.</li>
+</ol>

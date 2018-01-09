@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<title>Custom Properties Example 1</title>
+
+<style>
+
+  :root {
+    --mycol: repeating-linear-gradient(to left, #00F 10vw, black 20vw, #00F 30vw );
+    --maincol: rgba(255,127,0,0.5);
+    --myfilter: hue-rotate(190deg);
+    --margin: 3rem;
+    --padding: 1rem;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  body { background: var(--mycol); }
+  h1   { color: var(--maincol);    }
+
+  h1, ol {
+    margin: var(--margin);
+    padding: var(--padding);
+  }
+
+  li {
+    color: var(--maincol);
+  }
+
+  li:nth-child(odd) {
+    filter: var(--myfilter);
+  }
+
+  .special {
+    --maincol: white;
+  }
+
+@media (max-width: 400px) {
+  :root {
+    --mycol: lightblue;
+    --margin: 1rem;
+  }
+}
+</style>
+
+<h1>Custom Properties Example</h1>
+
+<ol>
+  <li>This document has a background colour that is set using a CSS3 custom property.</li>
+  <li>The heading is coloured using a different property.</li>
+  <li>The custom properties syntax can also represent other values that can be substitued, e.g. here, measurements are stored in two new variables and used to define margins and padding.</li>
+  <li>Custom Properies make changing page layout <em>way</em> simpler when using media queries.</li>
+  <li class="special">Custom Properies also respect the cascade, so here the <code>special</code> class is more specific than the element styling on <code>li</code>, so the colour of this line is different.</li>
+  <li>Revisiting point 2 - we can include pretty-much anything that is a valid css property as a custom property.</li>
+</ol>

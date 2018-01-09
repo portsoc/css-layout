@@ -1,0 +1,36 @@
+header {
+  grid-area: header;
+}
+article {
+  grid-area: article;
+}
+nav {
+  grid-area: nav;
+}
+footer {
+  grid-area: footer;
+}
+
+main {
+  width: 100vw;
+  max-width: 60em;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 2em;
+  grid-template-columns: 15em 1fr;
+  grid-template-areas:
+      "header header"
+      "nav article"
+      "footer footer"
+}
+
+@media (max-width: 60em) {
+  main {
+    grid-template-columns: 100%;
+    grid-template-areas:
+      "header"
+      "article"
+      "nav"
+      "footer"
+  }
+}
