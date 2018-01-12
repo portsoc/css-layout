@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<title>Grid Layout for honeycomb circles</title>
+
+<style>
+
+  :root {
+    /* parameters that rule the grid */
+    --circle-container-width: 90vw;
+    --circle-columns: 2;             /* must be an even number */
+    --circle-gap: .5em;              /* even if 0, this must have a unit for some reason */
+
+    /* calculated values based on the above parameters */
+    /* radius of the circles */
+    --circle-r: calc((1 / (calc(var(--circle-columns) - 1) * 1.732 + 2)) * var(--circle-container-width) - .5 * var(--circle-gap) + .5 * var(--circle-gap) / var(--circle-columns));
+    /* diameter of the circles */
+    --circle-d: calc(2 * var(--circle-r));
+    /* X distance between centers of adjacent circles */
+    --circle-xd: calc(1.732 * var(--circle-r));
+    /* X gap between circles */
+    --circle-gap-x: calc(0.8944 * var(--circle-gap));
+  }
+
+  body {
+    background: #ff4;
+    color: black;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  h1 {
+    width: var(--circle-container-width);
+    margin: 0 auto;
+    background-color: #880;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  main { /* circle container */
+    /* position the box */
+    width: var(--circle-container-width);
+    margin: var(--circle-gap) auto;
+
+    /* make space for the last half-circles */
+    padding-bottom: var(--circle-r);
+
+    display: grid;
+    grid-template-columns: repeat(var(--circle-columns), var(--circle-xd));
+    grid-auto-rows: var(--circle-d); /* height of a row */
+    grid-gap: var(--circle-gap) var(--circle-gap-x);
+  }
+
+  main > p {
+    /* make it a circle */
+    height: var(--circle-d);
+    width: var(--circle-d);
+    border: black 1px dashed;
+    border-radius: 50%;
+
+    background: #dd0;
+    position: relative;
+
+    /* align the text in the middle */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    /* don't let the text touch the circle */
+    padding: 20%;
+  }
+
+  /* every other circle is halfway between the rows */
+  main > p:nth-of-type(2n) {
+    transform: translateY(50%)translateY(calc(var(--circle-gap) / 2));
+  }
+
+  /* depending on size of screen, have 2/4/6/8 columns */
+  /* we cannot have odd numbers of columns other than 1 */
+  @media screen and (min-width: 11cm) { :root { --circle-container-width: 10cm; --circle-columns: 2; } }
+  @media screen and (min-width: 21cm) { :root { --circle-container-width: 20cm; --circle-columns: 4; } }
+  @media screen and (min-width: 31cm) { :root { --circle-container-width: 90vw; --circle-columns: 6; } }
+
+  /* special case when too narrow to have more columns than 1 */
+  @media screen and (max-width: 11cm) {
+    :root {
+      --circle-container-width: 5cm;
+      --circle-columns: 1;
+    }
+    h1 {
+      width: inherit;
+      max-width: 10cm;
+    }
+    main > p:nth-of-type(2n) {
+      transform: none;
+    }
+  }
+
+</style>
+
+<h1>Grid Layout for honeycomb circles</h1>
+
+<main>
+  <p>Grids are nice.</p>
+  <p>Grids are fun.</p>
+  <p>Grids are dynamic.</p>
+  <p>Grids are surprising.</p>
+  <p>Grids are ok.</p>
+  <p>Grids are etc.</p>
+  <p>And so on.</p>
+  <p>And so forth.</p>
+  <p>message 1</p>
+  <p>message 2</p>
+  <p>message 3</p>
+  <p>message 4</p>
+  <p>message 5</p>
+  <p>message 6</p>
+  <p>message 7</p>
+  <p>message 8</p>
+  <p>message 9</p>
+  <p>message 10</p>
+  <p>message 11</p>
+  <p>message 12</p>
+  <p>message 13</p>
+  <p>message 14</p>
+</main>
