@@ -1,0 +1,237 @@
+<!doctype html>
+<title>Using Flex Layout</title>
+
+<style>
+  body {
+    background: white;
+    color: black;
+    display: flex;
+    overflow-x: hidden;
+  }
+
+  button {
+    margin: .5em;
+    background: rgb(33, 150, 243);
+    color: white;
+    text-transform: uppercase;
+    padding: .5em 1em;
+    border-radius: .4em;
+    border: none;
+    font-size: 1em;
+  }
+
+  body > section {
+    padding: 0 1em;
+    margin: 0;
+    flex-basis: 50%;
+    flex-shrink: 0;
+    box-sizing: border-box;
+  }
+
+  body > section + section {
+    border-left: thin solid black;
+  }
+
+  section > section {
+    background: #ddd;
+    border-radius: .4em;
+  }
+
+
+
+  #buttons0b {
+    text-align: right;
+  }
+
+  #buttons0c {
+    text-align: right;
+  }
+
+  #buttons0c button {
+    width: 10em;
+  }
+
+
+
+  #buttons1a {
+    display: flex;
+  }
+
+  #buttons1b {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  #buttons1c {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  #buttons1c button {
+    flex-basis: 100px;
+  }
+
+  #buttons1d {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+
+  #buttons1d button {
+    flex-basis: 100px;
+  }
+
+  #buttons1e {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+
+  #buttons1e button {
+    flex-basis: 100px;
+    flex-grow: 1;
+  }
+
+  #buttons1f {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+
+  #buttons1f button {
+    flex-basis: 100px;
+  }
+
+  #buttons1g {
+    display: flex;
+  }
+
+  #buttons1g button {
+    flex-basis: 100px;
+  }
+
+  #buttons1g button:first-child {
+    margin-right: auto;
+  }
+</style>
+
+
+
+
+<section>
+  <h1>Using Traditional Layout</h1>
+
+  <h2>List of buttons</h2>
+
+  <p>We often have a list of buttons.</p>
+
+  <section id=buttons0a>
+    <button>?</button>
+    <button>back</button>
+    <button>forward</button>
+    <button>index</button>
+  </section>
+
+  <h2>Right align</h2>
+
+  <p>Sometimes we want them on the right.</p>
+
+  <section id=buttons0b>
+    <button>?</button>
+    <button>back</button>
+    <button>forward</button>
+    <button>index</button>
+  </section>
+
+  <h2>Sizing</h2>
+
+  <p>And we may want them have the same size. If we don't have enough space, they will go on multiple lines.</p>
+
+  <section id=buttons0c>
+    <button>?</button>
+    <button>back</button>
+    <button>forward</button>
+    <button>index</button>
+  </section>
+</section>
+
+
+
+<section>
+  <h1>Using Flex Layout</h1>
+
+  <h2>Default flex</h2>
+
+  <p>We often have a list of buttons.</p>
+
+  <section id=buttons1a>
+    <button>?</button>
+    <button>back</button>
+    <button>forward</button>
+    <button>index</button>
+  </section>
+
+  <h2>Right align</h2>
+
+  <p>Sometimes we want them on the right.</p>
+
+  <section id=buttons1b>
+    <button>?</button>
+    <button>back</button>
+    <button>forward</button>
+    <button>index</button>
+  </section>
+
+  <h2>Sizing</h2>
+
+  <p>And we may want them have the same size. If we don't have enough space, with flex they'll stay on one line, and shrink.</p>
+
+  <section id=buttons1c>
+    <button>?</button>
+    <button>back</button>
+    <button>forward</button>
+    <button>index</button>
+  </section>
+
+  <h2>Wrapping</h2>
+
+  <p>They can still go on multiple lines, if need be.</p>
+
+  <section id=buttons1d>
+    <button>?</button>
+    <button>back</button>
+    <button>forward</button>
+    <button>index</button>
+  </section>
+
+  <h2>Growing</h2>
+
+  <p>They can grow, too, to take up space.</p>
+
+  <section id=buttons1e>
+    <button>?</button>
+    <button>back</button>
+    <button>forward</button>
+    <button>index</button>
+  </section>
+
+  <h2>Spacing</h2>
+
+  <p>They can be spaced nicely and not grow.</p>
+
+  <section id=buttons1f>
+    <button>?</button>
+    <button>back</button>
+    <button>forward</button>
+    <button>index</button>
+  </section>
+
+  <p>Or one button can be away from the others.</p>
+
+  <section id=buttons1g>
+    <button>?</button>
+    <button>back</button>
+    <button>forward</button>
+    <button>index</button>
+  </section>
+</section>
