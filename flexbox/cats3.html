@@ -1,61 +1,14 @@
 <!doctype html>
 <title>Using Flex Layout</title>
+<link rel=stylesheet href="cats.css">
 
 <h1>Using Flex Layout</h1>
 
-<style>
-  body {
-    background: white;
-    color: black;
-  }
-
-  figure {
-    border: thin solid grey;
-    padding: .5em;
-    margin: .5em;
-  }
-
-  #cats1 {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  #cats1 figure {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-
-  #cats1 figure figcaption {
-    margin-top: .5em;
-  }
-
-  #cats2 {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  #cats2 figure {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-
-  #cats2 figure img {
-    margin: auto;
-  }
-
-  #cats2 figure figcaption {
-    margin-top: .5em;
-  }
-
-</style>
-
-<h2>Nested Flex</h2>
+<h2>(3a) Nested Flex</h2>
 
 <p>Cat cards can always have caption at the bottom.</p>
 
-<section id=cats1>
+<section id=cats3a>
   <figure>
     <img src="http://placekitten.com/g/100/200">
     <figcaption>Fluffly</figcaption>
@@ -90,9 +43,11 @@
   </figure>
 </section>
 
+<h2>(3b) Nested Flex for Centring</h2>
+
 <p>And the picture in the middle.</p>
 
-<section id=cats2>
+<section id=cats3b>
   <figure>
     <img src="http://placekitten.com/g/100/200">
     <figcaption>Fluffly</figcaption>

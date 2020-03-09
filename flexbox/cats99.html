@@ -1,0 +1,433 @@
+<!doctype html>
+<title>Using Flex Layout</title>
+<link rel=stylesheet href="cats.css">
+
+<h1>Using Flex Layout</h1>
+
+<h2>(0a) Display: block</h2>
+
+<p>We can have cards with cat images. By default, a figure is a block.</p>
+
+<section id=cats0a>
+  <figure>
+    <img src="http://placekitten.com/g/100/200">
+    <figcaption>Fluffly</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placekitten.com/g/200/150">
+    <figcaption>Madge</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placekitten.com/g/100/120">
+    <figcaption>Penny</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placekitten.com/g/120/200">
+    <figcaption>Roger</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placekitten.com/g/180/150">
+    <figcaption>Ghengis</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placekitten.com/g/100/100">
+    <figcaption>Claude</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placekitten.com/g/120/100">
+    <figcaption>Top</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placekitten.com/g/120/121">
+    <figcaption>Colin</figcaption>
+  </figure>
+</section>
+
+<h2>(0b) Display: inline-block</h2>
+
+<p>We can override that if we want the cats in a line.</p>
+
+<section id=cats0b>
+  <figure>
+    <img src="http://placekitten.com/g/100/200">
+    <figcaption>Fluffly</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placekitten.com/g/200/150">
+    <figcaption>Madge</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placekitten.com/g/100/120">
+    <figcaption>Penny</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placekitten.com/g/120/200">
+    <figcaption>Roger</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placekitten.com/g/180/150">
+    <figcaption>Ghengis</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placekitten.com/g/100/100">
+    <figcaption>Claude</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placekitten.com/g/120/100">
+    <figcaption>Top</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placekitten.com/g/120/121">
+    <figcaption>Colin</figcaption>
+  </figure>
+</section>
+
+
+
+<h2>(1a) Flex with Wrapping</h2>
+
+<p>With flex we can put them in line, too, and by default they grow to same line size.</p>
+
+<section id=cats1a>
+  <figure>
+    <img src="http://placekitten.com/g/100/200">
+    <figcaption>Fluffly</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placekitten.com/g/200/150">
+    <figcaption>Madge</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placekitten.com/g/100/120">
+    <figcaption>Penny</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placekitten.com/g/120/200">
+    <figcaption>Roger</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placekitten.com/g/180/150">
+    <figcaption>Ghengis</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placekitten.com/g/100/100">
+    <figcaption>Claude</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placekitten.com/g/120/100">
+    <figcaption>Top</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placekitten.com/g/120/121">
+    <figcaption>Colin</figcaption>
+  </figure>
+</section>
+
+<h2>(1b) Flex with Growing</h2>
+
+<p>The cards can grow in width to fill a line. We can highlight a card by letting it grow more.</p>
+
+<section id=cats1b>
+  <figure>
+    <img src="http://placekitten.com/g/100/200">
+    <figcaption>Fluffly</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placekitten.com/g/200/150">
+    <figcaption>Madge</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placekitten.com/g/100/120">
+    <figcaption>Penny</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placekitten.com/g/120/200">
+    <figcaption>Roger</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placekitten.com/g/180/150">
+    <figcaption>Ghengis</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placekitten.com/g/100/100">
+    <figcaption>Claude</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placekitten.com/g/120/100">
+    <figcaption>Top</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placekitten.com/g/120/121">
+    <figcaption>Colin</figcaption>
+  </figure>
+</section>
+
+<h2>(1c) Centred contents</h2>
+
+<p>Card contents should be centred.</p>
+
+<section id=cats1c>
+  <figure>
+    <img src="http://placekitten.com/g/100/200">
+    <figcaption>Fluffly</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placekitten.com/g/200/150">
+    <figcaption>Madge</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placekitten.com/g/100/120">
+    <figcaption>Penny</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placekitten.com/g/120/200">
+    <figcaption>Roger</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placekitten.com/g/180/150">
+    <figcaption>Ghengis</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placekitten.com/g/100/100">
+    <figcaption>Claude</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placekitten.com/g/120/100">
+    <figcaption>Top</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placekitten.com/g/120/121">
+    <figcaption>Colin</figcaption>
+  </figure>
+</section>
+
+
+
+<h2>(2a) Flex Default Align: Stretching</h2>
+
+<p>By default, the cards will take whole line height.</p>
+
+<section id=cats2a>
+  <figure>
+    <img src="http://placekitten.com/g/100/200">
+    <figcaption>Fluffly</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placekitten.com/g/200/150">
+    <figcaption>Madge</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placekitten.com/g/100/120">
+    <figcaption>Penny</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placekitten.com/g/120/200">
+    <figcaption>Roger</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placekitten.com/g/180/150">
+    <figcaption>Ghengis</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placekitten.com/g/100/100">
+    <figcaption>Claude</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placekitten.com/g/120/100">
+    <figcaption>Top</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placekitten.com/g/120/121">
+    <figcaption>Colin</figcaption>
+  </figure>
+</section>
+
+<h2>(2b) Align Top</h2>
+
+<section id=cats2b>
+  <figure>
+    <img src="http://placekitten.com/g/100/200">
+    <figcaption>Fluffly</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placekitten.com/g/200/150">
+    <figcaption>Madge</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placekitten.com/g/100/120">
+    <figcaption>Penny</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placekitten.com/g/120/200">
+    <figcaption>Roger</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placekitten.com/g/180/150">
+    <figcaption>Ghengis</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placekitten.com/g/100/100">
+    <figcaption>Claude</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placekitten.com/g/120/100">
+    <figcaption>Top</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placekitten.com/g/120/121">
+    <figcaption>Colin</figcaption>
+  </figure>
+</section>
+
+<h2>(2c) Align Bottom</h2>
+
+<section id=cats2c>
+  <figure>
+    <img src="http://placekitten.com/g/100/200">
+    <figcaption>Fluffly</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placekitten.com/g/200/150">
+    <figcaption>Madge</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placekitten.com/g/100/120">
+    <figcaption>Penny</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placekitten.com/g/120/200">
+    <figcaption>Roger</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placekitten.com/g/180/150">
+    <figcaption>Ghengis</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placekitten.com/g/100/100">
+    <figcaption>Claude</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placekitten.com/g/120/100">
+    <figcaption>Top</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placekitten.com/g/120/121">
+    <figcaption>Colin</figcaption>
+  </figure>
+</section>
+
+<h2>(2d) Align Centred</h2>
+
+<section id=cats2d>
+  <figure>
+    <img src="http://placekitten.com/g/100/200">
+    <figcaption>Fluffly</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placekitten.com/g/200/150">
+    <figcaption>Madge</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placekitten.com/g/100/120">
+    <figcaption>Penny</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placekitten.com/g/120/200">
+    <figcaption>Roger</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placekitten.com/g/180/150">
+    <figcaption>Ghengis</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placekitten.com/g/100/100">
+    <figcaption>Claude</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placekitten.com/g/120/100">
+    <figcaption>Top</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placekitten.com/g/120/121">
+    <figcaption>Colin</figcaption>
+  </figure>
+</section>
+
+
+<h2>(3a) Nested Flex</h2>
+
+<p>Cat cards can always have caption at the bottom.</p>
+
+<section id=cats3a>
+  <figure>
+    <img src="http://placekitten.com/g/100/200">
+    <figcaption>Fluffly</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placekitten.com/g/200/150">
+    <figcaption>Madge</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placekitten.com/g/100/120">
+    <figcaption>Penny</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placekitten.com/g/120/200">
+    <figcaption>Roger</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placekitten.com/g/180/150">
+    <figcaption>Ghengis</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placekitten.com/g/100/100">
+    <figcaption>Claude</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placekitten.com/g/120/100">
+    <figcaption>Top</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placekitten.com/g/120/121">
+    <figcaption>Colin</figcaption>
+  </figure>
+</section>
+
+<h2>(3b) Nested Flex for Centring</h2>
+
+<p>And the picture in the middle.</p>
+
+<section id=cats3b>
+  <figure>
+    <img src="http://placekitten.com/g/100/200">
+    <figcaption>Fluffly</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placekitten.com/g/200/150">
+    <figcaption>Madge</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placekitten.com/g/100/120">
+    <figcaption>Penny</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placekitten.com/g/120/200">
+    <figcaption>Roger</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placekitten.com/g/180/150">
+    <figcaption>Ghengis</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placekitten.com/g/100/100">
+    <figcaption>Claude</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placekitten.com/g/120/100">
+    <figcaption>Top</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placekitten.com/g/120/121">
+    <figcaption>Colin</figcaption>
+  </figure>
+</section>

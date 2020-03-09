@@ -1,60 +1,14 @@
 <!doctype html>
 <title>Using Flex Layout</title>
+<link rel=stylesheet href="cats.css">
 
 <h1>Using Flex Layout</h1>
 
-<style>
-  body {
-    background: white;
-    color: black;
-  }
-
-  figure {
-    border: thin solid grey;
-    padding: .5em;
-    margin: .5em;
-  }
-
-  #cats1 {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  #cats2 {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  #cats2 figure {
-    flex-grow: 1;
-    transition: 1s;
-  }
-
-  #cats2 figure:hover {
-    flex-grow: 10;
-  }
-
-  #cats3 {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  #cats3 figure {
-    flex-grow: 1;
-    transition: 1s;
-    text-align: center;
-  }
-
-  #cats3 figure:hover {
-    flex-grow: 10;
-  }
-</style>
-
-<h2>Flex with Wrapping</h2>
+<h2>(1a) Flex with Wrapping</h2>
 
 <p>With flex we can put them in line, too, and by default they grow to same line size.</p>
 
-<section id=cats1>
+<section id=cats1a>
   <figure>
     <img src="http://placekitten.com/g/100/200">
     <figcaption>Fluffly</figcaption>
@@ -89,11 +43,11 @@
   </figure>
 </section>
 
-<h2>Flex with Growing</h2>
+<h2>(1b) Flex with Growing</h2>
 
 <p>The cards can grow in width to fill a line. We can highlight a card by letting it grow more.</p>
 
-<section id=cats2>
+<section id=cats1b>
   <figure>
     <img src="http://placekitten.com/g/100/200">
     <figcaption>Fluffly</figcaption>
@@ -128,11 +82,11 @@
   </figure>
 </section>
 
-<h2>Centred contents</h2>
+<h2>(1c) Centred contents</h2>
 
 <p>Card contents should be centred.</p>
 
-<section id=cats3>
+<section id=cats1c>
   <figure>
     <img src="http://placekitten.com/g/100/200">
     <figcaption>Fluffly</figcaption>
