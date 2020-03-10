@@ -40,38 +40,35 @@
   }
 
   #buttons1c button {
-    flex-basis: 100px;
+    flex-basis: 10em;
   }
 
   #buttons1d {
     display: flex;
-    justify-content: flex-end;
     flex-wrap: wrap;
   }
 
   #buttons1d button {
-    flex-basis: 100px;
+    flex-basis: 10em;
   }
 
   #buttons1e {
     display: flex;
-    justify-content: flex-end;
     flex-wrap: wrap;
   }
 
   #buttons1e button {
-    flex-basis: 100px;
+    flex-basis: 10em;
     flex-grow: 1;
   }
 
   #buttons1f {
     display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+    justify-content: space-around;
   }
 
   #buttons1f button {
-    flex-basis: 100px;
+    flex-basis: 10em;
   }
 
   #buttons1g {
@@ -79,15 +76,15 @@
   }
 
   #buttons1g button {
-    flex-basis: 100px;
+    flex-basis: 10em;
   }
 
-  #buttons1g button:first-child {
-    margin-right: auto;
+  #buttons1g button {
+    margin: auto;
   }
 </style>
 
-<h2>Default flex</h2>
+<h2>(1a) Default flex</h2>
 
 <p>We often have a list of buttons.</p>
 
@@ -98,7 +95,7 @@
   <button>index</button>
 </section>
 
-<h2>Right align</h2>
+<h2>(1b) Right align</h2>
 
 <p>Sometimes we want them on the right.</p>
 
@@ -109,7 +106,7 @@
   <button>index</button>
 </section>
 
-<h2>Sizing</h2>
+<h2>(1c) Sizing</h2>
 
 <p>And we may want them have the same size. If we don't have enough space, with flex they'll stay on one line, and shrink.</p>
 
@@ -120,7 +117,7 @@
   <button>index</button>
 </section>
 
-<h2>Wrapping</h2>
+<h2>(1d) Wrapping</h2>
 
 <p>They can still go on multiple lines, if need be.</p>
 
@@ -131,7 +128,7 @@
   <button>index</button>
 </section>
 
-<h2>Growing</h2>
+<h2>(1e) Growing</h2>
 
 <p>They can grow, too, to take up space.</p>
 
@@ -142,7 +139,7 @@
   <button>index</button>
 </section>
 
-<h2>Spacing</h2>
+<h2>(1f) Spacing</h2>
 
 <p>They can be spaced nicely and not grow.</p>
 
@@ -152,6 +149,8 @@
   <button>forward</button>
   <button>index</button>
 </section>
+
+<h2>(1g) Special Spacing</h2>
 
 <p>Or one button can be away from the others.</p>
 
