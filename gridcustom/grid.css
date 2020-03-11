@@ -1,3 +1,14 @@
+/* The 'old way' of having dynamic content is to
+ * use an @media directive at the end of the
+ * stylesheet.  It has to go at the end so it
+ * can override anything that has been previously
+ * set.
+ *
+ * In this example that's fairly easy to understand,
+ * but in a real system with a longer and more complex
+ * set of styles, this becomes very difficult to maintain.
+ */
+
 header {
   grid-area: header;
 }
