@@ -1,0 +1,163 @@
+<!doctype html>
+<title>Using Flex Layout</title>
+
+<h1>Using Flex Layout</h1>
+
+<style>
+  body {
+    background: white;
+    color: black;
+  }
+
+  button {
+    margin: .5em;
+    background: rgb(33, 150, 243);
+    color: white;
+    text-transform: uppercase;
+    padding: .5em 1em;
+    border-radius: .4em;
+    border: none;
+    font-size: 1em;
+  }
+
+  section {
+    background: #ddd;
+    border-radius: .4em;
+  }
+
+  #buttons1 {
+    display: flex;
+  }
+
+  #buttons2 {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  #buttons3 {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  #buttons3 button {
+    flex-basis: 100px;
+  }
+
+  #buttons4 {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+
+  #buttons4 button {
+    flex-basis: 100px;
+  }
+
+  #buttons5 {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+
+  #buttons5 button {
+    flex-basis: 100px;
+    flex-grow: 1;
+  }
+
+  #buttons6 {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+
+  #buttons6 button {
+    flex-basis: 100px;
+  }
+
+  #buttons7 {
+    display: flex;
+  }
+
+  #buttons7 button {
+    flex-basis: 100px;
+  }
+
+  #buttons7 button:first-child {
+    margin-right: auto;
+  }
+</style>
+
+<h2>Default flex</h2>
+
+<p>We often have a list of buttons.</p>
+
+<section id=buttons1>
+  <button>?</button>
+  <button>back</button>
+  <button>forward</button>
+  <button>index</button>
+</section>
+
+<h2>Right align</h2>
+
+<p>Sometimes we want them on the right.</p>
+
+<section id=buttons2>
+  <button>?</button>
+  <button>back</button>
+  <button>forward</button>
+  <button>index</button>
+</section>
+
+<h2>Sizing</h2>
+
+<p>And we may want them have the same size. If we don't have enough space, with flex they'll stay on one line, and shrink.</p>
+
+<section id=buttons3>
+  <button>?</button>
+  <button>back</button>
+  <button>forward</button>
+  <button>index</button>
+</section>
+
+<h2>Wrapping</h2>
+
+<p>They can still go on multiple lines, if need be.</p>
+
+<section id=buttons4>
+  <button>?</button>
+  <button>back</button>
+  <button>forward</button>
+  <button>index</button>
+</section>
+
+<h2>Growing</h2>
+
+<p>They can grow, too, to take up space.</p>
+
+<section id=buttons5>
+  <button>?</button>
+  <button>back</button>
+  <button>forward</button>
+  <button>index</button>
+</section>
+
+<h2>Spacing</h2>
+
+<p>They can be spaced nicely and not grow.</p>
+
+<section id=buttons6>
+  <button>?</button>
+  <button>back</button>
+  <button>forward</button>
+  <button>index</button>
+</section>
+
+<p>Or one button can be away from the others.</p>
+
+<section id=buttons7>
+  <button>?</button>
+  <button>back</button>
+  <button>forward</button>
+  <button>index</button>
+</section>
