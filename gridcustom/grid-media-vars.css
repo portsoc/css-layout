@@ -1,0 +1,42 @@
+/* CSS custom properties (variables) allow us to
+ * move anything configurable (or that will change
+ * as a result of a media query) to be moved to
+ * the top of the stylesheet and 'de-nested' - we
+ * can just talk about generic values that can later
+ * be used.
+ */
+:root {
+  --columns: 1fr;
+  --layout: "header" "article" "nav" "footer";
+  --space-between-content: 0;
+}
+
+@media (width > 80ch) {
+  :root {
+    --columns: 25ch 1fr;
+    --layout: "header header" "nav article" "footer footer";
+    --space-between-content: 2em;
+  }
+}
+
+/* beyond here the style does not change for
+ * different circumstances/layouts - that's
+ * all taken care of in custom properties above
+ * so the CSS cascade is easier to understand
+ */
+ 
+* { box-sizing: border-box; }
+
+header  { grid-area: header;  }
+article { grid-area: article; }
+nav     { grid-area: nav;     }
+footer  { grid-area: footer;  }
+
+main {
+  max-width: 60em;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: var(--columns);
+  grid-template-areas: var(--layout);
+  gap: var(--space-between-content);
+}

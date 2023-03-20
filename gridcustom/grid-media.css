@@ -1,0 +1,48 @@
+/* The 'old way' of having dynamic content is to
+ * use an @media directive at the end of the
+ * stylesheet.  It has to go at the end so it
+ * can override anything that has been previously
+ * set.
+ *
+ * In this example, that's fairly easy to understand,
+ * but in a real system with a longer and more complex
+ * set of styles, this becomes very difficult to maintain.
+ * 
+ * Notice that the default styles are for a minimal
+ * capability display (e.g. a mobile).  i.e. Start
+ * small and progrssively add to the styles as the
+ * page increases in size.
+ */
+
+* { box-sizing: border-box; }
+
+/* header, article nav and footer elements all
+ * have names parts of the grid that they map to.
+ */
+header  { grid-area: header;  }
+article { grid-area: article; }
+nav     { grid-area: nav;     }
+footer  { grid-area: footer;  }
+
+main {
+  max-width: 100ch;
+  margin: 0 auto;
+  display: grid;
+  gap: 2em;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "header"
+    "article"
+    "nav"
+    "footer"
+}
+
+@media (width > 80ch) {
+  main {
+    grid-template-columns: 25ch 1fr;
+    grid-template-areas:
+        "header header"
+        "nav article"
+        "footer footer"
+    }
+}
