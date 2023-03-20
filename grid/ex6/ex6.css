@@ -1,0 +1,86 @@
+/* default style (small screen) */
+:root {
+  --display: block;
+  --columns: 1fr;
+  --rows: 1fr;
+  --areas: none;
+
+  --all: span;
+  --border: black thin solid;
+  --gap: 0;
+  --maincol: black;
+  --min-height: 2em;
+  --mycol: #FFCC9977;
+  --pad: 1em;
+  --radius: 0;
+  --wide: span 1;
+}
+
+/* larger screens (e.g. tablet) */
+@media (480px < width <= 768px) {
+  :root {
+    --display: grid;
+    --columns: 1fr 1fr;
+    --rows: 4em auto;
+
+    --areas: "head head";
+  }
+}
+
+/* wide screen format (e.g. desktop) */
+@media (768px < width) {
+  :root {
+    --display: grid;
+    --columns: 1fr 1fr 1fr;
+    --rows: 4em auto;
+
+    --all: 1 /-1;
+    --areas: "head head head";
+    --border: grey thin solid;
+    --gap: 1em;
+    --max-width: 140ch;
+    --min-height: 10vh;
+    --pad: 1em;
+    --radius: 1ch;
+    --wide: span 2;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  padding: var(--pad);
+  margin: 0 auto;
+  display: var(--display);
+  grid-template-columns: var(--columns);
+  grid-template-rows: var(--rows);
+  grid-template-areas: var(--areas);
+  gap: var(--gap);
+  max-width: var(--max-width);
+}
+
+main>h1 {
+  grid-area: head;
+  align-self: center;
+  justify-self: center;
+}
+
+div {
+  border: var(--border);
+  border-radius: var(--radius);
+  background: var(--mycol);
+  min-height: var(--min-height);
+  padding: var(--pad);
+}
+
+div.wide {
+  grid-column: var(--wide);
+}
+
+div.all {
+  grid-column: var(--all);
+}
