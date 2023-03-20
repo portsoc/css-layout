@@ -45,8 +45,25 @@
     --pad: 1em;
     --radius: 1ch;
     --wide: span 2;
+    --dir: column;
+    --imgwidth: 100cqw;
   }
 }
+
+@container tile (width > 400px) {
+  figure {
+    --dir: row;
+    --imgwidth: 50cqw;
+  }
+  main>div>figure>figcaption>p {
+    color: white;
+    background: red;
+  }
+  main>div>figure>img {
+    width: ;
+  }
+}
+
 
 * {
   margin: 0;
@@ -71,18 +88,20 @@ main>h1 {
   justify-self: center;
 }
 
-
 main>div {
+  container-type: inline-size;
+  container-name: tile;
+}
+
+main>div>figure {
   border: var(--border);
   border-radius: var(--radius);
   background: var(--mycol);
   min-height: var(--min-height);
   padding: var(--pad);
-  container-type: inline-size;
-  container-name: tile;
 }
 
-main>div>p {
+main>div>figure>figcaption {
   columns: var(--text-cols);
 }
 
@@ -92,4 +111,14 @@ main>div.wide {
 
 main>div.all {
   grid-column: var(--all);
+}
+
+main>div>figure {
+  display: flex;
+  flex-direction: var(--dir);
+}
+
+main>div>figure img {
+  object-fit: cover;
+  width: var(--imgwidth);
 }
