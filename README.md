@@ -35,11 +35,11 @@ multi column page with grid layout.
 * [ex1](https://portsoc.github.io/css-layout/flexbox/buttons1.html) - Flex layout
 * [Combined](https://portsoc.github.io/css-layout/flexbox/buttons-split.html) - Side-by-side.
 
-### Cats
-* [ex0](https://portsoc.github.io/css-layout/flexbox/cats0.html) - Traditonal (block & inline-block) layouts.
-* [ex1](https://portsoc.github.io/css-layout/flexbox/cats1.html) - Layout with flex - wrapping, growing & centering.
-* [ex2](https://portsoc.github.io/css-layout/flexbox/cats2.html) - Alignment
-* [ex3](https://portsoc.github.io/css-layout/flexbox/cats3.html) - Nested flex (vertical flex in a horizontal flex)
-[Combined](https://portsoc.github.io/css-layout/flexbox/cats-all.html) - All the cats on one page.
+### Bears
+* [ex0](https://portsoc.github.io/css-layout/flexbox/bears0.html) - Traditonal (block & inline-block) layouts.
+* [ex1](https://portsoc.github.io/css-layout/flexbox/bears1.html) - Layout with flex - wrapping, growing & centering.
+* [ex2](https://portsoc.github.io/css-layout/flexbox/bears2.html) - Alignment
+* [ex3](https://portsoc.github.io/css-layout/flexbox/bears3.html) - Nested flex (vertical flex in a horizontal flex)
+[Combined](https://portsoc.github.io/css-layout/flexbox/bears-all.html) - All the bears on one page.
 
 
