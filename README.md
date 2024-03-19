@@ -24,10 +24,6 @@ https://portsoc.github.io/css-layout/
 * [ex0](https://portsoc.github.io/css-layout/gridcustom/ex0.html) - A mobile-first, multi column page with grid layout.
 * [ex1](https://portsoc.github.io/css-layout/gridcustom/ex1.html) - As above but using custom properties to simplify the CSS cascade.
 
-### Grid Circles
-multi column page with grid layout.
-* [ex0](https://portsoc.github.io/css-layout/gridcircles/ex0.html) - Using CSS `calc()` to tesselate a grid of circles (i.e. a honeycomb).
-
 ## Flexbox
 
 ### Buttons
