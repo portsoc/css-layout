@@ -4,30 +4,26 @@
 
 <style>
 
-  :root {
-    --mycol: rosybrown;
-    --maincol: green;
+:root {
+    --blue: #00A0FF;
+    --purple: #621360;  
     --margin: 3rem;
     --padding: 1rem;
   }
 
-  * {
-    margin: 0;
-    padding: 0;
-  }
+  body { background: var(--blue); }
+  h1   { color: var(--purple);    }
 
-  body { background: var(--mycol); }
-  h1   { color: var(--maincol);    }
-
-  h1, ol {
+  h1, ol, li {
     margin: var(--margin);
     padding: var(--padding);
   }
 
-@media (max-width: 400px) {
+@media (width < 600px) {
   :root {
-    --mycol: lightblue;
+    --blue: #66D0FF;
     --margin: 1rem;
+    --padding: 0.5rem;
   }
 }
 </style>

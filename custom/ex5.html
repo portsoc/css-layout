@@ -5,23 +5,26 @@
 <style>
 
   :root {
-    --degs: 233deg;
-    --mycol: linear-gradient(to top, rgba(0,0,0,0.5), rgba(0, 0, 0, 1) 100%), linear-gradient(var(--degs),red, orange , yellow, green, cyan, blue, violet, red, orange , yellow, green, cyan, blue, violet, red);
-    --maincol: rgba(255,127,0,0.5);
-    --myfilter: hue-rotate(190deg);
+    --blue: linear-gradient(to top, rgba(0,0,0,0) 25%, rgba(0, 0, 0, 1) 100%), linear-gradient(var(--degs),red, orange , yellow, green, cyan, blue, violet, red, orange , yellow, green, cyan, blue, violet, red);
+    --purple: white;  
     --margin: 3rem;
     --padding: 1rem;
-    height: 100%;
-  }
 
+    --margin: 3rem;
+    --padding: 1rem;
+    --degs: 33deg;
+
+    --myfilter: blur(0.1em);
+    min-height: 400vmax;
+  }
 
   * {
     margin: 0;
     padding: 0;
   }
 
-  body { background: var(--mycol); }
-  h1   { color: var(--maincol);  }
+  body { background: var(--blue); }
+  h1   { color: var(--purple);  }
 
   h1, ol {
     margin: var(--margin);
@@ -29,7 +32,7 @@
   }
 
   li {
-    color: var(--maincol);
+    color: var(--purple);
   }
 
   li:nth-child(odd) {
@@ -37,15 +40,17 @@
   }
 
   .special {
-    --maincol: white;
+    --purple: #FF00FF;
   }
 
-@media (max-width: 400px) {
+  @media (width < 600px) {
   :root {
-    --mycol: lightblue;
+    --blue: #66D0FF;
     --margin: 1rem;
+    --padding: 0.5rem;
   }
 }
+
 </style>
 
 <h1>Custom Properties Example</h1>
@@ -58,3 +63,16 @@
   <li class="special">Custom Properies also respect the cascade, so here the <code>special</code> class is more specific than the element styling on <code>li</code>, so the colour of this line is different.</li>
   <li>Revisiting point 2 - we can include pretty-much anything that is a valid css property as a custom property.</li>
 </ol>
+
+<script>
+// This is a simple example of how to animate a custom property
+// let degs = 0;
+
+// function animate() {
+//   degs = (degs + 1) % 360;
+//   document.documentElement.style.setProperty('--degs', `${degs}deg`);
+//   requestAnimationFrame(animate);
+// }
+
+// animate();
+</script>

@@ -4,40 +4,39 @@
 
 <style>
 
+:root {
+  --blue: #00A0FF;
+  --purple: #621360;  
+  --margin: 3rem;
+  --padding: 1rem;
+}
+
+body { background: var(--blue); }
+h1   { color: var(--purple);    }
+
+h1, ol, li {
+  margin: var(--margin);
+  padding: var(--padding);
+}
+
+li {
+  color: var(--maincol);
+}
+
+.special {
+  --maincol: white;
+}
+
+@media (width < 600px) {
   :root {
-    --mycol: rosybrown;
-    --maincol: green;
-    --margin: 3rem;
-    --padding: 1rem;
-  }
-
-  * {
-    margin: 0;
-    padding: 0;
-  }
-
-  body { background: var(--mycol); }
-  h1   { color: var(--maincol);    }
-
-  h1, ol {
-    margin: var(--margin);
-    padding: var(--padding);
-  }
-
-  li {
-    color: var(--maincol);
-  }
-
-  .special {
-    --maincol: blue;
-  }
-
-@media (max-width: 400px) {
-  :root {
-    --mycol: lightblue;
+    --blue: #66D0FF;
     --margin: 1rem;
+    --padding: 0.5rem;
   }
 }
+
+
+
 </style>
 
 <h1>Custom Properties Example</h1>
