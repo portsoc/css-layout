@@ -21,8 +21,7 @@ https://portsoc.github.io/css-layout/
 * [ex5](https://portsoc.github.io/css-layout/grid/ex5.html) - Using more grid-areas
 
 ### Grid with Custom Properties
-* [ex0](https://portsoc.github.io/css-layout/gridcustom/ex0.html) - A mobile-first, multi column page with grid layout.
-* [ex1](https://portsoc.github.io/css-layout/gridcustom/ex1.html) - As above but using custom properties to simplify the CSS cascade.
+* [ex0](https://portsoc.github.io/css-layout/gridcustom/ex0.html) - A mobile-first, multi column page with grid layout.  See the Alternate Stylesheet [sic] for how to simplify this CSS using custom properties.
 
 ## Flexbox
 
