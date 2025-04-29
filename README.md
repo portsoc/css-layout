@@ -9,6 +9,7 @@ https://portsoc.github.io/css-layout/
 * [ex3](https://portsoc.github.io/css-layout/custom/ex3.html) - custom properties with media queries
 * [ex4](https://portsoc.github.io/css-layout/custom/ex4.html) - custom properties and cascade specificity
 * [ex5](https://portsoc.github.io/css-layout/custom/ex5.html) - example of more complex properties
+* [ex6](https://portsoc.github.io/css-layout/custom/ex6.html) - simplified media queries
 
 ## Grid
 
@@ -19,6 +20,7 @@ https://portsoc.github.io/css-layout/
 * [ex3](https://portsoc.github.io/css-layout/grid/ex3.html) - Add height to grid, grid entries share the space.
 * [ex4](https://portsoc.github.io/css-layout/grid/ex4.html) - Whole-page control using grid and a grid-area.
 * [ex5](https://portsoc.github.io/css-layout/grid/ex5.html) - Using more grid-areas
+* [ex6](https://portsoc.github.io/css-layout/grid/ex6/index.html) - A dynamic grid with media queries
 
 ### Grid with Custom Properties
 * [ex0](https://portsoc.github.io/css-layout/gridcustom/ex0.html) - A mobile-first, multi column page with grid layout.  See the Alternate Stylesheet [sic] for how to simplify this CSS using custom properties.
@@ -36,3 +38,7 @@ https://portsoc.github.io/css-layout/
 * [ex2](https://portsoc.github.io/css-layout/flexbox/bears/2-align-items.html) - Alignment
 * [ex3](https://portsoc.github.io/css-layout/flexbox/bears/3-nested.html) - Nested flex (vertical flex in a horizontal flex)
 
+
+## Container Queries
+* [ex0](https://portsoc.github.io/css-layout/container/ex0.html) - Basic example
+* [ex1](https://portsoc.github.io/css-layout/container/ex1.html) - Grid example
