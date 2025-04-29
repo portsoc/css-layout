@@ -26,15 +26,13 @@ https://portsoc.github.io/css-layout/
 ## Flexbox
 
 ### Buttons
-* [ex0](https://portsoc.github.io/css-layout/flexbox/buttons0.html) - Traditional (no flex) layout of buttons
-* [ex1](https://portsoc.github.io/css-layout/flexbox/buttons1.html) - Flex layout
-* [Combined](https://portsoc.github.io/css-layout/flexbox/buttons-split.html) - Side-by-side.
+* [ex0](https://portsoc.github.io/css-layout/flexbox/buttons/0-traditional.html) - Traditional (no flex) layout of buttons
+* [ex1](https://portsoc.github.io/css-layout/flexbox/buttons/1-flex.html) - Flex layout
+* [Combined](https://portsoc.github.io/css-layout/flexbox/buttons/2-both.html) - Side-by-side.
 
 ### Bears
-* [ex0](https://portsoc.github.io/css-layout/flexbox/bears0.html) - Traditonal (block & inline-block) layouts.
-* [ex1](https://portsoc.github.io/css-layout/flexbox/bears1.html) - Layout with flex - wrapping, growing & centering.
-* [ex2](https://portsoc.github.io/css-layout/flexbox/bears2.html) - Alignment
-* [ex3](https://portsoc.github.io/css-layout/flexbox/bears3.html) - Nested flex (vertical flex in a horizontal flex)
-[Combined](https://portsoc.github.io/css-layout/flexbox/bears-all.html) - All the bears on one page.
-
+* [ex0](https://portsoc.github.io/css-layout/flexbox/bears/0-traditional.html) - Traditonal (block & inline-block) layouts.
+* [ex1](https://portsoc.github.io/css-layout/flexbox/bears/1-flex.html) - Layout with flex - wrapping, growing & centering.
+* [ex2](https://portsoc.github.io/css-layout/flexbox/bears/2-align-items.html) - Alignment
+* [ex3](https://portsoc.github.io/css-layout/flexbox/bears/3-nested.html) - Nested flex (vertical flex in a horizontal flex)
 

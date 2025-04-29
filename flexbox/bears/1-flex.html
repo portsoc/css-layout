@@ -1,14 +1,50 @@
 <!doctype html>
 <title>Using Flex Layout</title>
-<link rel=stylesheet href="cats.css">
+<link rel=stylesheet href=style.css>
+
+<style>
+  #bears1a {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #bears1b {
+    display: flex;
+    flex-wrap: wrap;
+
+    figure {
+      flex-grow: 1;
+
+      &:hover {
+        flex-grow: 10;
+        transition: 1s;
+      }
+    }
+  }
+
+  #bears1c {
+    display: flex;
+    flex-wrap: wrap;
+
+    figure {
+      flex-grow: 1;
+      text-align: center;
+
+      &:hover {
+        flex-grow: 10;
+        transition: 1s;
+      }
+    }
+  }
+</style>
 
 <h1>Using Flex Layout</h1>
 
-<h2>(3a) Nested Flex</h2>
+<h2>(1a) Flex with Wrapping</h2>
 
-<p>Cat cards can always have caption at the bottom.</p>
+<p>With flex we can put them in line, too, and by default they grow to same line size.</p>
 
-<section id=cats3a>
+<section id=bears1a>
   <figure>
     <img src="http://placebear.com/g/100/200">
     <figcaption>Fluffly</figcaption>
@@ -43,11 +79,50 @@
   </figure>
 </section>
 
-<h2>(3b) Nested Flex for Centring</h2>
+<h2>(1b) Flex with Growing</h2>
 
-<p>And the picture in the middle.</p>
+<p>The figures can grow in width to fill a line. We can highlight a card by letting it grow more.</p>
 
-<section id=cats3b>
+<section id=bears1b>
+  <figure>
+    <img src="http://placebear.com/g/100/200">
+    <figcaption>Fluffly</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placebear.com/g/200/150">
+    <figcaption>Madge</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placebear.com/g/100/120">
+    <figcaption>Penny</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placebear.com/g/120/200">
+    <figcaption>Roger</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placebear.com/g/180/150">
+    <figcaption>Ghengis</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placebear.com/g/100/100">
+    <figcaption>Claude</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placebear.com/g/120/100">
+    <figcaption>Top</figcaption>
+  </figure>
+  <figure>
+    <img src="http://placebear.com/g/120/121">
+    <figcaption>Colin</figcaption>
+  </figure>
+</section>
+
+<h2>(1c) Centred contents</h2>
+
+<p>Card contents should be centred.</p>
+
+<section id=bears1c>
   <figure>
     <img src="http://placebear.com/g/100/200">
     <figcaption>Fluffly</figcaption>

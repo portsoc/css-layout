@@ -1,92 +1,43 @@
 <!DOCTYPE html>
 <meta charset="UTF-8">
-<title>Using Grid Layout</title>
+<title>Container Query Example</title>
 
 <style>
 
-  * {
-    box-sizing: border-box;
+  :root {
+    --bg: white;
+    --fg: black;
   }
 
-  main {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto 1fr 1fr 1fr;
-
-    grid-template-areas: "head head head"
-                         "master master other"
-                         "another lowermaster lowermaster"
-                         ". . finally";
-
-    height: 100vh;
-    width: 100vw;
+  section {
+    container-type: inline-size;
+    container-name: wide;
   }
 
-  main>div p {
-    border: black thin dashed;
-    background: gold;
-    height: 100%;
-  }
-
-  * {
-    margin: 0;
-    padding: 0;
-  }
-
-  main>header {
-    grid-area: head;
-    background-color: #8ca0ff;
-  }
-
-  main>header * {
-    margin: 1rem;
-  }
-
-
-  .lm {
-    grid-area: lowermaster;
-  }
-
-  .m {
-    grid-area: master;
-  }
-
-  .f {
-    grid-area: finally;
-  }
-
-main>div {
-  container-type: inline-size;
-  container-name: wide;
-}
-
-
-@container wide (min-width: 25em) {
-  main>div p {
-    color: white;
-    font-weight: bold;
-    font-size: 4ch;
+  p {
+    background-color: var(--bg, pink);
+    color: var(--fg, blue);
     padding: 1em;
-    background: red;
   }
-}
 
+  @container wide (width > 20em) {
+    p {
+      --bg: #0066CC;
+      --fg: white;
+    }
+  }
 </style>
 
-<main>
-  <header>
-    <h1>Using Grid Layout</h1>
-    <p>In this example each paragraph is now contained by a div.  Each div that is a direct child of <code>main</code> is declared as an <code>inline-size</code> container, and a container query is then used to restyle the content of the paragraphs.</p>
-    <p>Paras that are over 20 ems wide have a red background with white text, so as the page is expanded, different grid elements will light up red - the larger ones first, then all of them if the screen is wide enough.</p>
-  </header>
-
-  <div class="f"><p>...and finally...!</p></div>
-  <div><p>Grids are nice.</p></div>
-  <div class=m><p>Hello mum!</p></div>
-  <div><p>Grids are dynamic.</p></div>
-  <div><p>Grids are surprising.</p></div>
-  <div class=lm><p>ooooooooh this is nice.</p></div>
-  <div>
-    <p>Grids are etc.</p>
-  </div>
-</main>
+<h1>Containers</h1>
+<section style="width:100%">
+  <p>superwide</p>
+</section>
+<section style="width:75%">
+  <p>three quarters</p>
+</section>
+<section style="width:50%">
+  <p>half</p>
+</section>
+<section style="width:25%">
+  <p>1/4</p>
+</section>

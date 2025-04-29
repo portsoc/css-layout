@@ -1,14 +1,39 @@
 <!doctype html>
 <title>Using Flex Layout</title>
-<link rel=stylesheet href="cats.css">
+<link rel=stylesheet href=style.css>
+
+<style>
+#bears2a {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#bears2b {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+#bears2c {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+#bears2d {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+</style>
 
 <h1>Using Flex Layout</h1>
 
 <h2>(2a) Flex Default Align: Stretching</h2>
 
-<p>By default, the cards will take whole line height.</p>
+<p>By default, the figures will take whole line height.</p>
 
-<section id=cats2a>
+<section id=bears2a>
   <figure>
     <img src="http://placebear.com/g/100/200">
     <figcaption>Fluffly</figcaption>
@@ -45,7 +70,7 @@
 
 <h2>(2b) Align Top</h2>
 
-<section id=cats2b>
+<section id=bears2b>
   <figure>
     <img src="http://placebear.com/g/100/200">
     <figcaption>Fluffly</figcaption>
@@ -82,7 +107,7 @@
 
 <h2>(2c) Align Bottom</h2>
 
-<section id=cats2c>
+<section id=bears2c>
   <figure>
     <img src="http://placebear.com/g/100/200">
     <figcaption>Fluffly</figcaption>
@@ -119,7 +144,7 @@
 
 <h2>(2d) Align Centred</h2>
 
-<section id=cats2d>
+<section id=bears2d>
   <figure>
     <img src="http://placebear.com/g/100/200">
     <figcaption>Fluffly</figcaption>

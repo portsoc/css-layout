@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<title>Using Grid Layout</title>
+
+<style>
+  * {
+    box-sizing: border-box;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr 1fr 1fr;
+
+    grid-template-areas: "head head head"
+      "master master other"
+      "another lowermaster lowermaster"
+      ". . finally";
+
+    height: 100vh;
+    width: 100vw;
+
+    header {
+      grid-area: head;
+      background-color: #8ca0ff;
+    }
+
+    header * {
+      margin: 1rem;
+    }
+
+    div {
+      container-type: inline-size;
+      container-name: wide;
+
+      p {
+      padding: 1em;
+        border: black thin dashed;
+        background: gold;
+        height: 100%;
+      }
+    }
+
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  .lm {
+    grid-area: lowermaster;
+  }
+
+  .m {
+    grid-area: master;
+  }
+
+  .f {
+    grid-area: finally;
+  }
+
+  @container wide (min-width: 25em) {
+    main>div p {
+      color: white;
+      font-weight: bold;
+      font-size: 4ch;
+      background: red;
+    }
+  }
+
+  @container wide (min-width: 60em) {
+    main>div p {
+      color: white;
+      font-weight: bold;
+      font-size: 6ch;
+      background: #621360;
+    }
+  }
+</style>
+
+<main>
+  <header>
+    <h1>Using Grid Layout</h1>
+    <p>In this example each paragraph is now contained by a div. Each div that is a direct child of <code>main</code> is declared as an <code>inline-size</code> container, and a container query is then used to restyle the content of the paragraphs.</p>
+    <p>Paras that are over 20 ems wide have a red background with white text, so as the page is expanded, different grid elements will light up red - the larger ones first, then all of them if the screen is wide enough.</p>
+  </header>
+
+  <div class="f">
+    <p>...and finally...!</p>
+  </div>
+  <div>
+    <p>Grids are nice.</p>
+  </div>
+  <div class=m>
+    <p>Hello mum!</p>
+  </div>
+  <div>
+    <p>Grids are dynamic.</p>
+  </div>
+  <div>
+    <p>Grids are surprising.</p>
+  </div>
+  <div class=lm>
+    <p>ooooooooh this is nice.</p>
+  </div>
+  <div>
+    <p>Grids are etc.</p>
+  </div>
+</main>

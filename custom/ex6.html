@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<title>Custom Properties Example </title>
+
+<style>
+
+/* This is the base style */
+  :root {
+    --blue: linear-gradient(to top, rgba(0,0,0,0) 25%, rgba(0, 0, 0, 1) 100%), linear-gradient(var(--degs),red, orange , yellow, green, cyan, blue, violet, red, orange , yellow, green, cyan, blue, violet, red);
+    --purple: white;  
+    --margin: 3rem;
+    --padding: 1rem;
+
+    --margin: 3rem;
+    --padding: 1rem;
+    --degs: 33deg;
+
+    --myfilter: blur(0.1em);
+    min-height: 400vmax;
+  }
+
+  @media (width < 600px) {
+    :root {
+      --blue: #66D0FF;
+      --margin: 1rem;
+      --padding: 0.5rem;
+    }
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  body { background: var(--blue); }
+  h1   { color: var(--purple);  }
+
+  h1, ol {
+    margin: var(--margin);
+    padding: var(--padding);
+  }
+
+  li {
+    color: var(--purple);
+  }
+
+  li:nth-child(even) {
+    filter: var(--myfilter);
+  }
+
+  .special {
+    --purple: #FF00FF;
+  }
+
+}
+
+</style>
+
+<h1>Custom Properties Example</h1>
+
+<ol>
+  <li>This document has a background colour that is set using a CSS3 custom property.</li>
+  <li>The heading is coloured using a different property.</li>
+  <li>The custom properties syntax can also represent other values that can be substitued, e.g. here, measurements are stored in two new variables and used to define margins and padding.</li>
+  <li>Custom Properies make changing page layout <em>way</em> simpler when using media queries.</li>
+  <li class="special">Custom Properies also respect the cascade, so here the <code>special</code> class is more specific than the element styling on <code>li</code>, so the colour of this line is different.</li>
+  <li>Revisiting point 2 - we can include pretty-much anything that is a valid css property as a custom property.</li>
+  <li>Variables can be set at the top of the document, so @media queries that only set variables can also be at the top, which makes a lot more sense than having to be at the end so they can overwrite things.</li>
+</ol>
+
+<script>
+// This is a simple example of how to animate a custom property
+// let degs = 0;
+
+// function animate() {
+//   degs = (degs + 1) % 360;
+//   document.documentElement.style.setProperty('--degs', `${degs}deg`);
+//   requestAnimationFrame(animate);
+// }
+
+// animate();
+</script>
