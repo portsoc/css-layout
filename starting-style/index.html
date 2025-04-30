@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<title>Staring-Style Example</title>
+
+<style>
+  section {
+
+    border: solid thin grey;
+    border-radius: 1ch;
+    margin: 1ch;
+
+    p {
+      background-color: #336699;
+      color: white;
+      padding: 1em;
+      border-radius: 0.5ch;
+      margin: 1ch;
+
+      transition: background-color 1s ease-in-out, color 0.5s ease-in-out;
+
+      @starting-style {
+        background-color: #99FF00;
+        color: #000;
+      }
+
+    }
+  }
+
+
+</style>
+
+<h1>@Starting-Style</h1>
+<p>If you'd like to draw attention to an element when it's added to the page or when it switches from <code>display: none</code>, then <code>@starting-style</code> can help.</p>
+
+<button id="addbut">Add a Section</button>
+
+<main>
+</main>
+
+
+<script>
+  const addbut = document.querySelector('#addbut');
+  const main = document.querySelector('main');
+
+  addbut.addEventListener('click', () => {
+    const newSection = document.createElement('section');
+    const size = Math.round(Math.random() * 65 + 25);
+    newSection.innerHTML = `<p>${size}% width</p>`;
+    newSection.style.width = `${size}%`;
+    main.prepend(newSection);
+  });
+</script>
