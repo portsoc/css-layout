@@ -3,24 +3,40 @@
 <title>Container Query Example</title>
 
 <style>
-
   :root {
-    --bg: white;
+    --bg: pink;
     --fg: black;
+  }
+
+  * {
+    box-sizing: border-box;
   }
 
   section {
     container-type: inline-size;
     container-name: wide;
+
+    border: solid thin grey;
+    border-radius: 1ch;
+    margin: 1ch;
+
+    p {
+      background-color: var(--bg);
+      color: var(--fg);
+      padding: 1em;
+      border-radius: 0.5ch;
+      margin: 1ch;
+    }
   }
 
-  p {
-    background-color: var(--bg, pink);
-    color: var(--fg, blue);
-    padding: 1em;
-  }
 
-  @container wide (width > 20em) {
+  /*
+   * This defines a named container query called
+   * "wide".  Any elements with a container-name
+   * of "wide" that are more than 30em wide will
+   * have the rules defined here applied.
+   */
+  @container wide (width > 30em) {
     p {
       --bg: #0066CC;
       --fg: white;
@@ -28,16 +44,18 @@
   }
 </style>
 
-<h1>Containers</h1>
-<section style="width:100%">
-  <p>superwide</p>
+<h1>Container Queries</h1>
+<p>Four sections follow, each of which contains a single paragraph. Their widths are defined as a percentage of the page width. Paragraphs within these sections default to a pink background and white text, defined using the <code>--bg</code> &amp; <code>--fg</code> CSS variables. A <dfn>container query</dfn> changes these variables when the container section is wider than <code>30em</code>.</p>
+
+<section>
+  <p>100% width</p>
 </section>
 <section style="width:75%">
-  <p>three quarters</p>
+  <p>75% width</p>
 </section>
 <section style="width:50%">
-  <p>half</p>
+  <p>50% width</p>
 </section>
 <section style="width:25%">
-  <p>1/4</p>
+  <p>25% width</p>
 </section>
