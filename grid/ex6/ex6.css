@@ -34,7 +34,7 @@
     --columns: 1fr 1fr 1fr;
     --rows: 4em auto;
 
-    --all: 1 /-1;
+    --all: 1 / -1;
     --areas: "head head head";
     --border: grey thin solid;
     --gap: 1em;
